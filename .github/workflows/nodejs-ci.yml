@@ -12,20 +12,20 @@ jobs:
 
     strategy:
       matrix:
-        node-version: [22.x]
+        node-version: [22.x]   # 👈 Only Node 22 now
 
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
 
-      - name: Setup Node.js ${{ matrix.node-version }}
+      - name: Setup Node.js
         uses: actions/setup-node@v4
         with:
           node-version: ${{ matrix.node-version }}
-	  cache: 'npm'
+          cache: 'npm'
 
       - name: Install dependencies
-        run: npm cl
+        run: npm ci
 
       - name: Run tests
         run: npm test
