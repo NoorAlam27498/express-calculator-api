@@ -1,4 +1,4 @@
-name: Node.js CI (Fast)
+name: Node.js CI
 
 on:
   push:
@@ -18,9 +18,10 @@ jobs:
         uses: actions/setup-node@v4
         with:
           node-version: 22.x
+          cache: 'npm'
 
       - name: Install dependencies
-        run: npm install   
+        run: npm install
 
       - name: Run tests
         run: npm test
