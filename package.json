@@ -1,14 +1,13 @@
 {
   "name": "express-calculator-api",
   "version": "1.0.0",
-  "description": "",
+  "description": "A simple Express.js calculator API with Jest tests and GitHub Actions CI setup.",
   "main": "index.js",
   "scripts": {
-  "start": "node index.js",
-  "test": "jest"
-}
-,
-  "keywords": [],
+    "start": "node index.js",
+    "test": "jest --runInBand --detectOpenHandles --forceExit"
+  },
+  "keywords": ["express", "api", "calculator", "jest", "ci"],
   "author": "",
   "license": "ISC",
   "dependencies": {
@@ -17,5 +16,8 @@
   "devDependencies": {
     "jest": "^30.2.0",
     "supertest": "^7.1.4"
+  },
+  "jest": {
+    "testEnvironment": "node"
   }
 }
