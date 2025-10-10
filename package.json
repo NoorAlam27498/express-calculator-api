@@ -7,7 +7,13 @@
     "start": "node index.js",
     "test": "jest --runInBand --detectOpenHandles --forceExit"
   },
-  "keywords": ["express", "api", "calculator", "jest", "ci"],
+  "keywords": [
+    "express",
+    "api",
+    "calculator",
+    "jest",
+    "ci"
+  ],
   "author": "",
   "license": "ISC",
   "dependencies": {
